@@ -1,0 +1,5 @@
+# Schema for the configuration files of the interiors theme.
+
+interiors.settings:
+  type: theme_settings
+  label: 'interiors settings'
