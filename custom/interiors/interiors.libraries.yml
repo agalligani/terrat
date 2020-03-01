@@ -1,0 +1,10 @@
+style:
+  version: VERSION
+  css:
+    theme:
+      assets/css/interiors.style.css: {}
+  js:
+    assets/js/interiors.script.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
