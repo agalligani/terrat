@@ -7,8 +7,9 @@
  | for your application. See https://github.com/JeffreyWay/laravel-mix.
  |
  */
-const proxy = 'http://drupal.local';
-const mix = require('laravel-mix');
+const proxy = "http://terratlocal.com";
+const mix = require("laravel-mix");
+const LiveReloadPlugin = require("webpack-livereload-plugin");
 
 /*
  |--------------------------------------------------------------------------
@@ -16,7 +17,7 @@ const mix = require('laravel-mix');
  |--------------------------------------------------------------------------
  */
 mix
-  .setPublicPath('assets')
+  .setPublicPath("assets")
   .disableNotifications()
   .options({
     processCssUrls: false
@@ -29,8 +30,8 @@ mix
  */
 mix.browserSync({
   proxy: proxy,
-  files: ['assets/js/**/*.js', 'assets/css/**/*.css'],
-  stream: true,
+  files: ["assets/js/**/*.js", "assets/css/**/*.css"],
+  stream: true
 });
 
 /*
@@ -38,11 +39,20 @@ mix.browserSync({
  | SASS
  |--------------------------------------------------------------------------
  */
-mix.sass('src/sass/interiors.style.scss', 'css');
+mix.sass("src/sass/interiors.style.scss", "css");
 
 /*
  |--------------------------------------------------------------------------
  | JS
  |--------------------------------------------------------------------------
  */
-mix.js('src/js/interiors.script.js', 'js');
+mix.js("src/js/interiors.script.js", "js");
+
+/*
+ |---------------------------------------------------------------------------
+ | LiveReload
+ |---------------------------------------------------------------------------
+*/
+mix.webpackConfig({
+  plugins: [new LiveReloadPlugin()]
+});

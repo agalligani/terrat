@@ -18,6 +18,9 @@
 /sites/*/tmp
 /sites/*/cache
 
+# Ignore paths that may contain temporary files
+/sites/themes/custom/interiors/node_modules
+
 # Ignore testing related files
 /sites/simpletest
 
@@ -38,7 +41,7 @@
 /.gitattributes
 /.htaccess
 /autoload.php
-/composer.json
+# /composer.json
 /composer.lock
 /example.gitignore
 /index.php
