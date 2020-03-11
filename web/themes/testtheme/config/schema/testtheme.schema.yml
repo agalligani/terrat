@@ -1,0 +1,5 @@
+# Schema for the configuration files of the testtheme theme.
+
+testtheme.settings:
+  type: theme_settings
+  label: 'testtheme settings'

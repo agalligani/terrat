@@ -9,8 +9,6 @@
  */
 const proxy = "http://terratlocal.com";
 const mix = require("laravel-mix");
-const LiveReloadPlugin = require("webpack-livereload-plugin");
-
 /*
  |--------------------------------------------------------------------------
  | Configuration
@@ -47,12 +45,3 @@ mix.sass("src/sass/interiors.style.scss", "css");
  |--------------------------------------------------------------------------
  */
 mix.js("src/js/interiors.script.js", "js");
-
-/*
- |---------------------------------------------------------------------------
- | LiveReload
- |---------------------------------------------------------------------------
-*/
-mix.webpackConfig({
-  plugins: [new LiveReloadPlugin()]
-});
